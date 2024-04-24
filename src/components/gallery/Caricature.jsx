@@ -7,7 +7,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "../../components/ui/carousel";
-import { caricature, contest, two } from "../../../src/lib/data";
+import { caricature, contest, two, exp } from "../../../src/lib/data";
 import { Button } from "../ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -23,7 +23,7 @@ export default function Caricature() {
 
   useEffect(() => {
     // Define the categories array
-    const categories = [caricature, contest, two];
+    const categories = [caricature, contest, two, exp];
 
     // Update currentCategory based on the value of active
     setCurrentCategory(categories[active]);
@@ -52,6 +52,9 @@ export default function Caricature() {
         </Button>
         <Button onClick={() => handleSetActive(2)} variant="ghost" className="px-5">
           Ta'ang
+        </Button>
+        <Button onClick={() => handleSetActive(3)} variant="ghost" className="px-5">
+          Work Exp:
         </Button>
       </div>
       <Carousel className="relative">
